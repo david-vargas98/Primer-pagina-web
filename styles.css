@@ -1,0 +1,80 @@
+body
+{
+    /* Tipo de letra */
+    font-family: sans-serif;
+    /* Al poner 0 en margin, se quitan los márgenes por default */
+    margin: 0;
+}
+
+a
+{
+    /* Color del texto */
+    color: white;
+    /* Omite la decoración del texto, "la línea subrayada" */
+    text-decoration: none;
+}
+
+header
+{
+    /* Flex organiza los elementos de izquierda a derecha (horizontal)*/
+    display: flex;
+    /* Color de fondo */
+    background-color: #1E1E1E;
+                /* Se da un alineamiento a los elementos internos */
+    /* altura mínima */
+    min-height: 70px;
+    /* Se justifica para poder centrar los elementos, se separan por bloques*/
+    justify-content: space-between;
+    /* Ahora, se alinean los elementos de manera centrada*/
+    align-items: center;
+    /* Se le da relleno para que los elementos se muevan hacia adentro */
+    /* Si se le diera margen, se vería blanco el fondo por lo mismo que se da margen */
+    padding: 10px;
+}
+
+.logo
+{
+    /* Flex se adapta a la pantalla: responsivo */
+    display: flex;
+    /* Para poder centrar la imagen y el título de la página se hace en esta sección */
+    align-items: center;
+}
+/* En logo, se accede a la imagen que está dentro del link */
+.logo img
+{
+    /* Se le da un tamaño a la imagen */
+    height: 50px;
+    /* Se le da un margen de separación del logo hacia la derecga con el nombre*/
+    margin-right: 15px;
+    
+}
+
+nav a
+{
+    /* Establece el grosor de la letra */
+    font-weight: 600;
+    /* Se le da relleno a los espacios para separar los elementos */
+    padding-right: 10px;
+}
+
+/* De esta manera se podrá cambiar el color de los textos al navegar */
+/* Hover representa el que cada vez se pase el mouse por los elementos */
+nav a:hover
+{
+    color: #FFCD25;
+}
+
+/* De esta manera le vamos a permitir a la página adaptarse a otros dispositivos */
+/* Tal cual, se programa una condicional, es decir, cuando llegue a un tamaño de pantalla de 680px, este va modificar los atributos de cada elemento correspondiente que esté dentro del condicional*/
+@media(max-width:680px)
+{
+    header
+    {
+        flex-direction: column;
+    }
+    nav
+    {
+        /* Aplica un padding de arriba y abajo de 10px e izquierda y derecha de 0px*/
+        padding: 10px 0px;
+    }
+}
